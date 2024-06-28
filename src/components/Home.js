@@ -10,7 +10,15 @@ const Home = ({ scrollToSection, refs }) => {
         <div className="content">
           <h1>Welcome to our Fabrication Shop</h1>
           <p>We create high-quality iron gates, windows, and more.</p>
-          <button className="button">Enquire Now</button>
+          <a
+            href="/CONTACT_US"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(refs.contactUs);
+            }}
+          >
+            <button className="button">Enquire Now</button>
+          </a>
         </div>
       </div>
     </div>
